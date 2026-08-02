@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>RevOps AI Is Moving From Insight to Routed Action</title>
+  <style>
+    @media (max-width:620px) {
+      .container { width:100% !important; }
+      .px { padding-left:20px !important; padding-right:20px !important; }
+      h1 { font-size:24px !important; }
+    }
+    @media (prefers-color-scheme: dark) {
+      body, .bg { background:#0f1115 !important; }
+      .card { background:#1a1d24 !important; }
+      .ink, h1, h2, p { color:#e8e8ea !important; }
+      .rule { border-color:#2a2e37 !important; }
+    }
+  </style>
+</head>
+<body class="bg" style="margin:0;padding:0;background:#f4f4f5;">
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;">This week: enrichment agents, deal queues, signal routing, and multi-agent plumbing.&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;</div>
+  <table role="presentation" class="bg" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f5;">
+    <tr><td align="center" style="padding:24px 12px;">
+      <table role="presentation" class="container card" width="600" cellpadding="0" cellspacing="0"
+             style="width:600px;max-width:600px;background:#ffffff;border-radius:12px;overflow:hidden;
+                    box-shadow:0 1px 3px rgba(0,0,0,0.08);">
+        <!-- Header -->
+        <tr><td class="px" style="padding:32px 32px 8px;">
+          <p style="margin:0 0 4px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:12px;letter-spacing:1.5px;
+             text-transform:uppercase;color:#2563eb;font-weight:700;">Newsletter · 2026-08-02</p>
+          <h1 class="ink" style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:28px;line-height:1.25;
+             color:#1a1a1a;font-weight:800;">RevOps AI Is Moving From Insight to Routed Action</h1>
+        </td></tr>
+        <!-- Intro -->
+        <tr><td class="px" style="padding:16px 32px 0;"><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">The useful pattern this week is clear: AI is getting closer to the operational layer. The best RevOps use cases are not generic copilots. They read messy revenue data, convert it into a scored or routed action, and push it back into the system where the team already works.</p></td></tr>
+        <tr><td style="padding:8px 32px 0;"><div class="rule" style="border-top:1px solid #e5e7eb;
+            line-height:1px;font-size:1px;">&nbsp;</div></td></tr>
+        <!-- Sections -->
+        
+            <tr><td style="padding:8px 32px 0;">
+              <h2 style="margin:0 0 12px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:20px;
+                  line-height:1.3;color:#1a1a1a;font-weight:700;">Conversational enrichment is a speed layer, not a replacement for APIs</h2>
+              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">AI enrichment agents are useful when the request is frequent, bounded, and low-risk: append contact data, validate emails, dedupe records, or build a clean audience segment from existing CRM data. The important shift is who can run the job. Instead of translating every enrichment request into API documentation, field mapping, and scripts, RevOps can let a marketer or ops user describe the job in plain language and have the agent sequence the enrichment, validation, and audience-building steps.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Tools:</strong> Versium-style AI enrichment agents, REACH MCP Server, CRM enrichment APIs, Skopx-style workflow builders, Salesforce or HubSpot.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Impact:</strong> Faster list prep, fewer enrichment tickets, and cleaner routing inputs. The tradeoff is precision. APIs still win for high-volume, field-level, tightly governed integrations. Agents win when the bottleneck is translation work.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Build it yourself:</strong> Start with one safe workflow: enrich newly created CRM records that are missing company domain, industry, country, or employee count. Write only to empty fields. Add a confidence gate. High-confidence values update the CRM. Low-confidence values go to a review sheet with record link, proposed value, source, and confidence score. Measure fill rate, queue ratio, correction rate, and run health after seven days.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">Net: use agents for request speed, keep APIs for control.</p><p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:13px;color:#6b7280;">Sources: <a href="#src-1" style="color:#6b7280;text-decoration:none;">[1]</a> <a href="#src-2" style="color:#6b7280;text-decoration:none;">[2]</a></p>
+            </td></tr>
+            <tr><td style="padding:0 32px;"><div style="border-top:1px solid #e5e7eb;
+                line-height:1px;font-size:1px;">&nbsp;</div></td></tr>
+            
+            <tr><td style="padding:8px 32px 0;">
+              <h2 style="margin:0 0 12px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:20px;
+                  line-height:1.3;color:#1a1a1a;font-weight:700;">The next CRM hygiene frontier is zero-touch field maintenance</h2>
+              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">The strongest RevOps AI workflows do not ask reps to adopt another dashboard. They extract the signal from calls, emails, tickets, meetings, and chat, then route the next action or update the CRM directly. That matters because the CRM rarely captures the full conversation. One source notes the compression problem plainly: a 6,000-word sales call often becomes a 40 to 60-word CRM summary.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Tools:</strong> Revenue signal routing agents, Salesforce, HubSpot, email, Slack or Teams, conversation intelligence, support-ticket data.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Impact:</strong> Better pipeline hygiene without rep data-entry theater. Expansion mentions, stakeholder changes, next steps, BANT fields, competitor references, and stalled-deal risks can move from unstructured text into routed tasks or CRM fields. The risk is governance. Role-based access, approved data sources, and human review for consequential actions have to be designed before the workflow goes live.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Build it yourself:</strong> Pick one signal category first. I would start with stakeholder change or expansion mention because both are easy to validate and valuable when routed same day. Configure the agent to scan transcripts and support tickets, extract the exact quote, identify the account owner, draft the suggested action, and send it to the owner’s inbox. For CRM write-back, begin with notes or non-forecast fields before touching close date, amount, or stage.</p><p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:13px;color:#6b7280;">Sources: <a href="#src-3" style="color:#6b7280;text-decoration:none;">[3]</a></p>
+            </td></tr>
+            <tr><td style="padding:0 32px;"><div style="border-top:1px solid #e5e7eb;
+                line-height:1px;font-size:1px;">&nbsp;</div></td></tr>
+            
+            <tr><td style="padding:8px 32px 0;">
+              <h2 style="margin:0 0 12px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:20px;
+                  line-height:1.3;color:#1a1a1a;font-weight:700;">Deal prioritization needs evidence, not another score nobody trusts</h2>
+              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">AI deal queues are more useful when they show the evidence behind the ranking. A rep does not need a black-box priority number. They need to know which deal has momentum, which deal is slipping, what risk triggered the alert, and which quote from the buyer supports that call.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Tools:</strong> Domo Sales Ops Agent, Salesforce, Outreach, Gong or another conversation-intelligence source, email activity, CRM stage history.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Impact:</strong> Better rep focus and cleaner manager inspection. The Domo pattern is specific: rank opportunities by risk, momentum, and urgency; surface severity-ranked risks with direct quotes from transcripts; draft follow-up emails and call agendas; and write fields like Close Date, ACV, Next Steps, and Forecast Comments back to Salesforce after review. That is the right operating model. AI proposes. The rep edits. The CRM becomes more current.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Build it yourself:</strong> Create a weekly deal queue that combines three inputs: CRM stage changes, recent meeting or email activity, and transcript-derived risk signals. Require every risk label to include supporting evidence (exact quote, email excerpt, or missing activity window). Sort actions into Immediate, This Week, and Next Week. Do not let the model update forecast fields without a review step until managers trust the evidence trail.</p><p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:13px;color:#6b7280;">Sources: <a href="#src-4" style="color:#6b7280;text-decoration:none;">[4]</a></p>
+            </td></tr>
+            <tr><td style="padding:0 32px;"><div style="border-top:1px solid #e5e7eb;
+                line-height:1px;font-size:1px;">&nbsp;</div></td></tr>
+            
+            <tr><td style="padding:8px 32px 0;">
+              <h2 style="margin:0 0 12px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:20px;
+                  line-height:1.3;color:#1a1a1a;font-weight:700;">Predictive scoring is only as good as the operating loop around it</h2>
+              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">Predictive scoring and forecasting are back in focus because teams have enough historical CRM, engagement, and firmographic data to train useful models. The practical build is straightforward: audit won and lost records, define the conversion event, engineer features, validate against holdout data, deploy scores into the CRM, and monitor drift.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">The catch is adoption. A score without explainability becomes decoration. Sales needs to see why a lead or account scored highly, especially when the model is using signals from notes, emails, support tickets, product usage, or enrichment data. Leadership needs the same discipline for forecasting. One quantitative study in B2B financial services found organizations using integrated predictive analytics reached 91.8% forecasting accuracy versus 72.6% for conventional forecasting systems, a reported 26.4% improvement. Useful, but only if the model’s inputs stay clean and the forecast process actually uses the output.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">I would build the loop this way:</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>1. Define the Prediction</strong><br>Use one target first (lead-to-opportunity, opportunity-to-close, churn risk, or expansion likelihood). Do not blend multiple outcomes into one mysterious score.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>2. Ship the Reason Codes</strong><br>Expose the top three drivers behind the score inside Salesforce or HubSpot. Reps need the why, not a decimal.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>3. Monitor Drift Monthly</strong><br>Track conversion rate by score band, correction rate, and rep override rate. If high-score leads stop converting, the model has become stale or the market moved.</p><p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:13px;color:#6b7280;">Sources: <a href="#src-5" style="color:#6b7280;text-decoration:none;">[5]</a> <a href="#src-6" style="color:#6b7280;text-decoration:none;">[6]</a></p>
+            </td></tr>
+            <tr><td style="padding:0 32px;"><div style="border-top:1px solid #e5e7eb;
+                line-height:1px;font-size:1px;">&nbsp;</div></td></tr>
+            
+            <tr><td style="padding:8px 32px 0;">
+              <h2 style="margin:0 0 12px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:20px;
+                  line-height:1.3;color:#1a1a1a;font-weight:700;">Multi-agent RevOps breaks at the handoff layer</h2>
+              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">The problem with agentic GTM is no longer whether one agent can do one task. The problem is orchestration. Once you have an AI SDR, a website agent, a call-summary agent, an enrichment workflow, a content-review agent, and a CRM-native agent, the real question is which agent owns which record and how context moves between them.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">The cleanest routing rule I saw this week: route by data location and context level. High-context leads already in Salesforce belong with the CRM-native agent. Low-context leads outside the CRM can go to an outbound or research agent. Website visitors with active intent should go to a real-time engagement agent. The plumbing is less glamorous: webhooks, Zapier or Make, Google Sheets as a safety net, Slack as the notification layer, and Salesforce as the source of truth.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">Post-sales has the same pattern. Retention and expansion automation works when CRM, customer success, billing, support, and conversation data turn into churn-risk scores, health-score changes, rescue playbooks, and expansion prompts. The upside is real, but automation blindness is real too. Keep human review on strategic accounts and customer-facing actions.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">Net: the RevOps architecture is becoming a routing architecture. Agent output is only valuable when the next system can use it.</p><p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:13px;color:#6b7280;">Sources: <a href="#src-7" style="color:#6b7280;text-decoration:none;">[7]</a> <a href="#src-8" style="color:#6b7280;text-decoration:none;">[8]</a></p>
+            </td></tr>
+            <tr><td style="padding:0 32px;"><div style="border-top:1px solid #e5e7eb;
+                line-height:1px;font-size:1px;">&nbsp;</div></td></tr>
+            
+        <!-- Sources -->
+        
+            <tr><td style="padding:16px 32px 0;">
+              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:12px;letter-spacing:1.5px;
+                 text-transform:uppercase;color:#6b7280;font-weight:700;">Sources</p>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr id="src-1"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[1]</span>
+                  <a href="https://versium.com/blog/ai-data-enrichment-agents-vs-marketing-apis/" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">AI Enrichment Agents vs. Marketing APIs for CRM Data</a>
+                  <span style="color:#6b7280;"> · versium.com</span></td></tr><tr id="src-2"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[2]</span>
+                  <a href="https://skopx.com/resources/automate-crm-data-enrichment" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">Automating CRM Enrichment with Confidence Gating</a>
+                  <span style="color:#6b7280;"> · skopx.com</span></td></tr><tr id="src-3"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[3]</span>
+                  <a href="https://fifthelement.ai/blog/revenue-ai-for-revops-teams-turn-revenue-signals-into-action/" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">Zero-UI Revenue Signal Routing for RevOps</a>
+                  <span style="color:#6b7280;"> · fifthelement.ai</span></td></tr><tr id="src-4"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[4]</span>
+                  <a href="https://www.domo.com/ai/agents/sales-ops-agent" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">Domo Sales Ops Agent for Evidence-Backed Deal Prioritization</a>
+                  <span style="color:#6b7280;"> · domo.com</span></td></tr><tr id="src-5"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[5]</span>
+                  <a href="https://www.sumerudigital.com/blog/predictive-lead-scoring-model-development-services" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">Predictive Lead Scoring Model Development Framework</a>
+                  <span style="color:#6b7280;"> · sumerudigital.com</span></td></tr><tr id="src-6"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[6]</span>
+                  <a href="https://global.asrcconference.com/index.php/asrc/article/view/109" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">Predictive Analytics and B2B Sales Forecasting Accuracy</a>
+                  <span style="color:#6b7280;"> · global.asrcconference.com</span></td></tr><tr id="src-7"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[7]</span>
+                  <a href="https://www.saastr.com/the-agent-orchestration-problem-how-we-wire-20-ai-agents-together-without-losing-our-minds/" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">A Practical Orchestration Pattern for 20+ AI Agents</a>
+                  <span style="color:#6b7280;"> · saastr.com</span></td></tr><tr id="src-8"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[8]</span>
+                  <a href="https://www.quivly.ai/blog/revenue-operations-automation-7-platforms-redefining-how-post-sales-teams-retain-and-expand-revenue" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">RevOps Automation Platforms for Retention and Expansion</a>
+                  <span style="color:#6b7280;"> · quivly.ai</span></td></tr></table>
+            </td></tr>
+        
+        <!-- Footer -->
+        <tr><td class="px" style="padding:24px 32px 32px;">
+          <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:12px;line-height:1.5;color:#6b7280;">-Will</p>
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>

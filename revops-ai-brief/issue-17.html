@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>RevOps AI Brief: GTM Engineering Is Moving From Outreach Hacks To Revenue Systems</title>
+  <style>
+    @media (max-width:620px) {
+      .container { width:100% !important; }
+      .px { padding-left:20px !important; padding-right:20px !important; }
+      h1 { font-size:24px !important; }
+    }
+    @media (prefers-color-scheme: dark) {
+      body, .bg { background:#0f1115 !important; }
+      .card { background:#1a1d24 !important; }
+      .ink, h1, h2, p { color:#e8e8ea !important; }
+      .rule { border-color:#2a2e37 !important; }
+    }
+  </style>
+</head>
+<body class="bg" style="margin:0;padding:0;background:#f4f4f5;">
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;">Forecast agents, Clay+n8n scoring, routing, and the data layer underneath.&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;</div>
+  <table role="presentation" class="bg" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f5;">
+    <tr><td align="center" style="padding:24px 12px;">
+      <table role="presentation" class="container card" width="600" cellpadding="0" cellspacing="0"
+             style="width:600px;max-width:600px;background:#ffffff;border-radius:12px;overflow:hidden;
+                    box-shadow:0 1px 3px rgba(0,0,0,0.08);">
+        <!-- Header -->
+        <tr><td class="px" style="padding:32px 32px 8px;">
+          <p style="margin:0 0 4px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:12px;letter-spacing:1.5px;
+             text-transform:uppercase;color:#2563eb;font-weight:700;">Newsletter · 2026-09-20</p>
+          <h1 class="ink" style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:28px;line-height:1.25;
+             color:#1a1a1a;font-weight:800;">RevOps AI Brief: GTM Engineering Is Moving From Outreach Hacks To Revenue Systems</h1>
+        </td></tr>
+        <!-- Intro -->
+        <tr><td class="px" style="padding:16px 32px 0;"><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">The useful GTM-engineering work is getting clearer: build the operating layer that lets AI reason over clean revenue data, then push decisions back into CRM, Slack, routing, and outbound systems. The weak version is more AI copy. The strong version is stage-level forecast commentary, ICP scoring, signal-based routing, and auditable workflow logs.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">This issue is about the strong version.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">-Will</p></td></tr>
+        <tr><td style="padding:8px 32px 0;"><div class="rule" style="border-top:1px solid #e5e7eb;
+            line-height:1px;font-size:1px;">&nbsp;</div></td></tr>
+        <!-- Sections -->
+        
+            <tr><td style="padding:8px 32px 0;">
+              <h2 style="margin:0 0 12px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:20px;
+                  line-height:1.3;color:#1a1a1a;font-weight:700;">Forecast Commentary Agents Are A Better AI Wedge Than Another Dashboard</h2>
+              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">The best near-term forecasting use case is narrative automation on top of the systems you already trust.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">A forecast commentary agent pulls open pipeline from Salesforce and HubSpot, merges it into a stage-level view, calculates coverage versus quota, flags at-risk stages, then drafts written commentary into Slack while appending stage snapshots to Google Sheets. That is useful because it turns forecast inspection into an operating cadence, not another dashboard someone has to interpret.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Tools:</strong> Salesforce, HubSpot, Slack, Google Sheets, an LLM layer, and API or text-to-SQL access to CRM data.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Impact:</strong> Faster forecast prep, cleaner stage-by-stage inspection, and a written record of how pipeline risk changed over time. The tradeoff is obvious: if stage definitions, close dates, and opportunity hygiene are loose, the agent will produce confident commentary on bad inputs.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Build it yourself:</strong> Start with one forecast view (open pipeline by stage, owner, close period, amount, next step, last activity, and risk fields). Add deterministic calculations first (coverage, stage aging, missing next step, pushed close date). Then let the LLM write the commentary from those structured fields. Do not let the model invent risk. Make it explain only the fields you provide.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">Net: use AI for the written inspection layer, not as a replacement for forecast logic.</p><p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:13px;color:#6b7280;">Sources: <a href="#src-2" style="color:#6b7280;text-decoration:none;">[2]</a> <a href="#src-1" style="color:#6b7280;text-decoration:none;">[1]</a> <a href="#src-5" style="color:#6b7280;text-decoration:none;">[5]</a></p>
+            </td></tr>
+            <tr><td style="padding:0 32px;"><div style="border-top:1px solid #e5e7eb;
+                line-height:1px;font-size:1px;">&nbsp;</div></td></tr>
+            
+            <tr><td style="padding:8px 32px 0;">
+              <h2 style="margin:0 0 12px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:20px;
+                  line-height:1.3;color:#1a1a1a;font-weight:700;">Clay + n8n Is Becoming The Default ICP Scoring Pattern</h2>
+              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">The practical GTM-engineering stack is settling into a recognizable shape: CRM for truth, Clay or Apollo for enrichment, n8n or Make for orchestration, and an outreach platform for activation.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">The strongest version is not “enrich this lead and send an email.” It is a closed-loop scoring system. Clay pulls company size, industry, tech stack, headcount growth, and funding events. n8n routes the enriched payload into CRM custom properties. Scoring and routing run from those fields. Closed deals are traced back to lead source, enrichment tier, sequence variant, and rep assignment rule.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Tools:</strong> Clay, n8n, HubSpot or Salesforce, Apollo or ZoomInfo, and your outreach platform.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Impact:</strong> Better routing, cleaner segmentation, and faster testing of which ICP signals actually correlate with pipeline. The risk is overfitting. A score that looks sophisticated but does not tie back to conversion, ACV, sales cycle, or win rate is just decoration.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Build it yourself:</strong> Pick five fields that sales actually believes in (for example: employee count, industry, tech stack, hiring signal, funding event). Write each field to CRM. Create three score bands with explicit routing rules. Log every workflow execution with input data, decision points, output data, timestamp, and outcome.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">The workflow log is the asset. Without it, you cannot debug the system or prove influence.</p><p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:13px;color:#6b7280;">Sources: <a href="#src-11" style="color:#6b7280;text-decoration:none;">[11]</a> <a href="#src-13" style="color:#6b7280;text-decoration:none;">[13]</a> <a href="#src-14" style="color:#6b7280;text-decoration:none;">[14]</a></p>
+            </td></tr>
+            <tr><td style="padding:0 32px;"><div style="border-top:1px solid #e5e7eb;
+                line-height:1px;font-size:1px;">&nbsp;</div></td></tr>
+            
+            <tr><td style="padding:8px 32px 0;">
+              <h2 style="margin:0 0 12px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:20px;
+                  line-height:1.3;color:#1a1a1a;font-weight:700;">AI Routing Needs Explainable Labels, Not A Black Box</h2>
+              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">Routing is where GTM engineering becomes operationally valuable. The job is to decide who gets contacted, how fast, by whom, and with what context.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">That means the routing layer needs more than round-robin assignment. It should classify inbound leads and replies, enrich the account, match the lead to the right owner, and write the reason back to CRM (for example: “ICP-A, hiring signal, high intent, enterprise territory”). LeanData still shows up as the dedicated routing and lead-to-account matching layer, while GTM-engineering agencies are building custom outbound and reply-routing infrastructure on top of Clay, enrichment providers, and CRM.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Tools:</strong> LeanData or custom routing logic, Clay, enrichment APIs, Salesforce or HubSpot, and an LLM or rules engine for reply classification.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Impact:</strong> Higher speed-to-lead, fewer handoff errors, and better rep context. The failure mode is silent misrouting. If the system cannot show why a lead went to a person, RevOps will not be able to defend it when sales pushes back.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;"><strong>Build it yourself:</strong> Add three fields to every routed record: routing label, routing reason, and routing timestamp. Keep the first model simple. Classify intent, fit, and territory separately, then combine them into assignment logic. Review misroutes weekly and update the rules before expanding coverage.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">Black-box routing will not survive contact with a sales floor.</p><p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:13px;color:#6b7280;">Sources: <a href="#src-1" style="color:#6b7280;text-decoration:none;">[1]</a> <a href="#src-5" style="color:#6b7280;text-decoration:none;">[5]</a> <a href="#src-9" style="color:#6b7280;text-decoration:none;">[9]</a> <a href="#src-6" style="color:#6b7280;text-decoration:none;">[6]</a></p>
+            </td></tr>
+            <tr><td style="padding:0 32px;"><div style="border-top:1px solid #e5e7eb;
+                line-height:1px;font-size:1px;">&nbsp;</div></td></tr>
+            
+            <tr><td style="padding:8px 32px 0;">
+              <h2 style="margin:0 0 12px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:20px;
+                  line-height:1.3;color:#1a1a1a;font-weight:700;">The Foundation Work Is Still The Constraint</h2>
+              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">AI does not fix a broken GTM system. It accelerates it.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">That is the uncomfortable part for RevOps. Lead scoring, forecast commentary, enrichment waterfalls, and automated outreach all depend on the same basics: clean CRM fields, deduplicated records, shared lifecycle definitions, consistent attribution, and a single reporting baseline. If marketing, sales, and CS use different definitions of a qualified lead, AI will not resolve the disagreement. It will operationalize the disagreement faster.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">The RevOps job is to make the business logic explicit before GTM engineering automates it. Standardize lifecycle stages. Define entry and exit criteria. Align reporting. Decide which fields are trusted sources versus enrichment guesses. Then let AI operate inside those constraints.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">I would treat every AI GTM initiative as a data-readiness test first. If the team cannot explain the object model, field ownership, routing rules, and attribution model, the first sprint should be cleanup, not automation.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">Net: AI is the execution layer. RevOps is still the control system.</p><p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:13px;color:#6b7280;">Sources: <a href="#src-12" style="color:#6b7280;text-decoration:none;">[12]</a> <a href="#src-3" style="color:#6b7280;text-decoration:none;">[3]</a> <a href="#src-4" style="color:#6b7280;text-decoration:none;">[4]</a> <a href="#src-10" style="color:#6b7280;text-decoration:none;">[10]</a></p>
+            </td></tr>
+            <tr><td style="padding:0 32px;"><div style="border-top:1px solid #e5e7eb;
+                line-height:1px;font-size:1px;">&nbsp;</div></td></tr>
+            
+            <tr><td style="padding:8px 32px 0;">
+              <h2 style="margin:0 0 12px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:20px;
+                  line-height:1.3;color:#1a1a1a;font-weight:700;">The Role Shift: GTM Engineer As Systems Owner</h2>
+              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">The GTM engineer is less “technical SDR” and more revenue-systems owner.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">The role sits between RevOps, growth, and sales. It builds automated outbound systems, data pipelines, enrichment workflows, AI-assisted personalization, CRM updates, routing logic, and feedback loops. The output is not more activity. The output is a system that decides which accounts matter, what context to use, when to trigger action, and how to measure whether the action worked.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">That changes the operating model. SDRs turn context into conversations. GTM engineers design the system that creates, scores, routes, and measures that context. RevOps should own the governance around that system: data quality, field definitions, funnel logic, and reporting integrity.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">The first hire or internal owner should be judged on workflow adoption, data quality, routing accuracy, speed-to-lead, and pipeline influenced by the systems they run. If they are measured only on email volume, the role will collapse back into outbound ops.</p><p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;">The better metric is simple: did the system improve conversion without adding headcount?</p><p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:13px;color:#6b7280;">Sources: <a href="#src-6" style="color:#6b7280;text-decoration:none;">[6]</a> <a href="#src-14" style="color:#6b7280;text-decoration:none;">[14]</a> <a href="#src-7" style="color:#6b7280;text-decoration:none;">[7]</a> <a href="#src-8" style="color:#6b7280;text-decoration:none;">[8]</a></p>
+            </td></tr>
+            <tr><td style="padding:0 32px;"><div style="border-top:1px solid #e5e7eb;
+                line-height:1px;font-size:1px;">&nbsp;</div></td></tr>
+            
+        <!-- Sources -->
+        
+            <tr><td style="padding:16px 32px 0;">
+              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:12px;letter-spacing:1.5px;
+                 text-transform:uppercase;color:#6b7280;font-weight:700;">Sources</p>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr id="src-1"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[1]</span>
+                  <a href="https://codecarbon.com/guy-raber-revenue-operations-challenges-clari-vs-gong-and-other-tools-for-solving-modern-revops-problems/" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">Guy Raber: Revenue Operations Challenges, Clari vs Gong, and Other Tools for Solving Modern RevOps Problems</a>
+                  <span style="color:#6b7280;"> · codecarbon.com</span></td></tr><tr id="src-2"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[2]</span>
+                  <a href="https://www.scalekit.com/blog/revenue-forecast-commentary-agent" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">Revenue Forecast Commentary Agent</a>
+                  <span style="color:#6b7280;"> · scalekit.com</span></td></tr><tr id="src-3"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[3]</span>
+                  <a href="https://www.revsyncnow.com/insights/what-tools-help-unify-crm-and-saas-data-for-revenue-operations-teams" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">What Tools Help Unify CRM and SaaS Data for Revenue Operations Teams</a>
+                  <span style="color:#6b7280;"> · revsyncnow.com</span></td></tr><tr id="src-4"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[4]</span>
+                  <a href="https://www.solulab.com/ai-in-revenue-operations/" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">AI in Revenue Operations</a>
+                  <span style="color:#6b7280;"> · solulab.com</span></td></tr><tr id="src-5"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[5]</span>
+                  <a href="https://jem-products.com/revops-strategy-clari-vs-gong-and-other-platforms-for-building-a-data-driven-revenue-operations-strategy/" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">RevOps Strategy: Clari vs Gong and Other Platforms for Building a Data-Driven Revenue Operations Strategy</a>
+                  <span style="color:#6b7280;"> · jem-products.com</span></td></tr><tr id="src-6"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[6]</span>
+                  <a href="https://www.growthtoday.co/blog/gtm-engineer-job-description" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">GTM Engineer Job Description</a>
+                  <span style="color:#6b7280;"> · growthtoday.co</span></td></tr><tr id="src-7"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[7]</span>
+                  <a href="https://growthcurve.co/clay-invented-the-job-title-that-buys-clay" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">Clay Invented the Job Title That Buys Clay</a>
+                  <span style="color:#6b7280;"> · growthcurve.co</span></td></tr><tr id="src-8"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[8]</span>
+                  <a href="https://himalayas.app/companies/wellhub/jobs/go-to-market-engineer-5115074710" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">Go-to-Market Engineer</a>
+                  <span style="color:#6b7280;"> · himalayas.app</span></td></tr><tr id="src-9"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[9]</span>
+                  <a href="https://astragtm.io/playbooks/best-gtm-engineering-agencies-b2b-saas" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">Best GTM Engineering Agencies for B2B SaaS</a>
+                  <span style="color:#6b7280;"> · astragtm.io</span></td></tr><tr id="src-10"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[10]</span>
+                  <a href="https://pulserevops.com/ai-infrastructure/ai610" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">AI Infrastructure</a>
+                  <span style="color:#6b7280;"> · pulserevops.com</span></td></tr><tr id="src-11"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[11]</span>
+                  <a href="https://www.systemsbysami.com/blog/how-to-build-gtm-engineering-stack-for-b2b-startups" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">How to Build a GTM Engineering Stack for B2B Startups</a>
+                  <span style="color:#6b7280;"> · systemsbysami.com</span></td></tr><tr id="src-12"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[12]</span>
+                  <a href="https://skaled.com/insights/revops-ai-gtm-strategy/" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">RevOps &amp; AI: Build a Strong GTM Strategy First</a>
+                  <span style="color:#6b7280;"> · skaled.com</span></td></tr><tr id="src-13"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[13]</span>
+                  <a href="https://www.gtmengineerclub.com/tools/ai-workflow-automation-tools/" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">I tested AI workflow automation tools: Here are the 7 best for GTM in ...</a>
+                  <span style="color:#6b7280;"> · gtmengineerclub.com</span></td></tr><tr id="src-14"><td style="padding:4px 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                  font-size:13px;line-height:1.5;color:#6b7280;">
+                  <span style="color:#1a1a1a;">[14]</span>
+                  <a href="https://www.revenueoperationsalliance.com/what-is-gtm-engineering/" style="color:#2563eb;text-decoration:none;"
+                     target="_blank" rel="noopener">What is GTM engineering? The complete growth guide</a>
+                  <span style="color:#6b7280;"> · revenueoperationsalliance.com</span></td></tr></table>
+            </td></tr>
+        
+        <!-- Footer -->
+        <tr><td class="px" style="padding:24px 32px 32px;">
+          <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-size:12px;line-height:1.5;color:#6b7280;">If you build one thing this week, build the workflow log. Inputs, decisions, outputs, timestamp, outcome. That is how RevOps turns AI from a demo into a system.
+
+-Will</p>
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>
